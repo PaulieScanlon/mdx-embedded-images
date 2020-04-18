@@ -1,0 +1,25 @@
+---
+title: Test Post
+embeddedImages:
+  - image1.jpg
+  - image2.jpg
+---
+
+## Props
+
+`props.embeddedImages` returns a key for each image named in the frontmatter field `embeddedImages`
+
+<pre style={{ overflow: "auto", backgroundColor: "#F7F7F7", padding: "16px" }}>
+  <code>{JSON.stringify(props.embeddedImages, null, 2)}</code>
+</pre>
+
+## Embedded Images
+
+<Flex sx={{ flexWrap: "wrap", mb: 4 }}>
+  <Box sx={{ width: ["100%", "50%"] }}>
+    <Img fluid={props.embeddedImages.image1.fluid} />
+  </Box>
+  <Box sx={{ width: ["100%", "50%"] }}>
+    <Img fluid={props.embeddedImages.image2.fluid} />
+  </Box>
+</Flex>
